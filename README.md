@@ -11,8 +11,9 @@ Thermal Printer Extension for Sign In / Out Tickets. Extends [WP Google Classroo
 
 ## Compiling QZ Tray, and Setting Up Verification
 * First, install all dependencies for the system you will want this to run on: https://qz.io/wiki/install-dependencies
-* Do a git pull to get a copy of the files: 
+* Do a git clone to get a copy of the files: 
 ```
+git clone https://github.com/qzind/tray
 ```
 * Move into the generated tray folder.
 * Then, generate the needed certificates, as described in this article, using:
