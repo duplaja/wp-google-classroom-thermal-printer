@@ -5,7 +5,7 @@
 
 // Sample key.  Replace with one used for CSR generation
 $KEY = 'key.pem';
-//$PASS = 'Somepassword';
+//$PASS = 'password';
 
 $req = $_GET['request'];
 $privateKey = openssl_get_privatekey(file_get_contents($KEY) /*, $PASS*/ );

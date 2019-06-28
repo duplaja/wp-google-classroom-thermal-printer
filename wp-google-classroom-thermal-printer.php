@@ -70,8 +70,14 @@ if(!function_exists('thermal_google_classroom_menu')) {
 function gclassroom_wp_integration_display_thermal_setup() {
     echo '<h1>Thermal Printer Setup</h1>';
     
-    echo '<div id="store_data" data-certfile="'.plugins_url('assets/signing/cert.pem', __FILE__ ).'" data-signfile="'.
-    plugins_url('assets/signing/sign-message.php',__FILE__).'"></div>
+    echo gclassroom_wp_integration_thermal_shortcode();
     
-    <button onclick="print_exit_ticket()">Print?</button>';
+    echo '<button onclick="print_pass_to_me()">Print Pass To Me</button>';
 }
+
+function gclassroom_wp_integration_thermal_shortcode() {
+
+    return '<div id="store_data" data-certfile="'.plugins_url('assets/signing/cert.pem', __FILE__ ).'" data-signfile="'.plugins_url('assets/signing/sign-message.php',__FILE__).'"></div>';
+
+}
+add_shortcode('gclassroom_thermal_data','gclassroom_wp_integration_thermal_shortcode');
